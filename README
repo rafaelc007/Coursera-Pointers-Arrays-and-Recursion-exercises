@@ -1,0 +1,12 @@
+Here we have the optional exercises proposed in the Converting strings to int section of Pointers, Arrays and recursion course of Coursera.
+
+1.  Write the function int myatoi(const char * str) which behaves like the atoi function, except that you write it yourself (without using atoi or strtol)
+2.  Write the function int myatoiHex(const char * str) which behaves like the atoi function, except (a) it interprets the string as a hexadecimal (base 16) number rather than decimal and (b) you write it yourself (without using atoi or strtol)
+3.  Write the function long mystrtol(const char * str, char ** endptr, int base) which behaves like strtol, except that you write it yourself (without using atoi or strtol)
+
+Here are a few hints to help you with these problems:
+
+-    Remember that everything is a number, including characters. This means that you could do things like take a character c and compare it to other characters (e.g., c >= '0' ) , subtract one character from another (c - '0') or any other math you might want to do. Note that the digits 0--9 all have consecutive numeric values so '7' - '0' is 7.
+-    Remember the in decimal numbers, each place is 10x as large as the previous: 12 is (10 *1) + 2. 123 is 100 * 1 + 10 * 2 + 3. It may help to think of this as (1 * 10+ 2) *10 +3. Likewise, 1234 is ((1 *10 +2) *10 +3) * 10 + 4.
+-    For base 16, similar principles apply, but each place is 16x as large as the previous: 0x1fc is (1 * 16 + 15) * 16 + 12.
+

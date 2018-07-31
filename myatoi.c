@@ -19,6 +19,7 @@ unsigned get_str_size(const char *str){
     }
     else{
       size++;
+    }
   }
 }
 

@@ -3,6 +3,7 @@
 #include <assert.h>
 
 int ten_raised(int pow){
+  assert(pow >= 0);
   int value = 1;
   for(int i=0; i<pow;i++){
     value *= 10;
@@ -25,18 +26,16 @@ int myatoi(const char *str){
     assert(str[i] >= 48);
 
     number += ten_raised(i);
-
    }
+  return -1;
 }
 
 int main(){
   const char name[] = "1234";
-
-  printf("testing: 10^0 = %d.\n", ten_raised(0));
-  printf("testing: 10^5 = %d.\n", ten_raised(5));  
-  //int number = myatoi(name);
+  
+  int number = myatoi(name);
   printf("value given: %s.\n",name);
-  //printf("value returned %d.\n",number);
+  printf("value returned %d.\n",number);
   
   return EXIT_SUCCESS;
 }

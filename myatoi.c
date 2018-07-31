@@ -28,7 +28,7 @@ int myatoi(const char *str){
   
   unsigned size = get_str_size(str);
   int number = 0;
-  for(unsigned i = size-2;i>=0;i--){
+  for(int i = size-2;i>=0;i--){
     //make sure the value is a number
     assert(str[i] <= 57);
     assert(str[i] >= 48);

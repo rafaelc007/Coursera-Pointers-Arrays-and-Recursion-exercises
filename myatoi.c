@@ -25,7 +25,8 @@ int myatoi(const char *str){
     assert(str[i] <= 57);
     assert(str[i] >= 48);
 
-    number += ten_raised(i);
+    number += (48-str[i])*ten_raised(i);
+    i++;
    }
   return -1;
 }
